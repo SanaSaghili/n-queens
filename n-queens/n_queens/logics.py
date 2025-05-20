@@ -37,5 +37,5 @@ class NQueensController:
     #تابع رزرو شده برای الگوریتم CSP (هنوز پیاده‌سازی نشده)
     def run_csp_algorithm(self):
 
-        pass  
+        pass
         return True
