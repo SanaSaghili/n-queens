@@ -1,2 +1,43 @@
+# Byte-compiled / optimized / DLL files
 __pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Virtual environment
+env/
+venv/
+ENV/
+.venv/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# VSCode
+.vscode/
+
+# JetBrains IDEs (like PyCharm)
 .idea/
+*.iml
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Log files
+*.log
+
+# Test files
+*.out
+*.tmp
+
+# Image and result files (optional, I don't want them on the git.)
+*.jpg
+*.png
+*.gif
+*.svg
+
+# Others
+*.swp
+*.bak
+*.~*
