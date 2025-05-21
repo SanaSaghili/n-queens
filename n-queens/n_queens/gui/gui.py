@@ -47,7 +47,7 @@ class NQueensUI:
 
         tk.Button(btn_frame, text="Backtracking Algorithm", command=self.run_backtracking_algorithm, **btn_cfg).grid(
             row=2, column=0, pady=5)
-        tk.Button(btn_frame, text="CSP Algorithm", command=self.run_min_conficts_algorithm, **btn_cfg).grid(row=3, column=0,
+        tk.Button(btn_frame, text="Min Conficts Algorithm", command=self.run_min_conficts_algorithm, **btn_cfg).grid(row=3, column=0,
                                                                                                    pady=5)
         tk.Button(btn_frame, text="Genetic Algorithm", command=self.run_genetic_algorithm, **btn_cfg).grid(row=4,
                                                                                                            column=0,
