@@ -47,7 +47,7 @@ class NQueensUI:
 
         tk.Button(btn_frame, text="Backtracking Algorithm", command=self.run_backtracking_algorithm, **btn_cfg).grid(
             row=2, column=0, pady=5)
-        tk.Button(btn_frame, text="CSP Algorithm", command=self.run_csp_algorithm, **btn_cfg).grid(row=3, column=0,
+        tk.Button(btn_frame, text="CSP Algorithm", command=self.run_min_conficts_algorithm, **btn_cfg).grid(row=3, column=0,
                                                                                                    pady=5)
         tk.Button(btn_frame, text="Genetic Algorithm", command=self.run_genetic_algorithm, **btn_cfg).grid(row=4,
                                                                                                            column=0,
@@ -127,11 +127,11 @@ class NQueensUI:
         solutions = self.controller.run_genetic_algorithm()
         self.root.after(0, self._on_algorithm_done, solutions)
 
-    def run_csp_algorithm(self):
+    def run_min_conficts_algorithm(self):
         if not self.update_n_and_controller():
             return
-        self.solution_label.config(text="Running CSP Algorithm...")
-        solutions = self.controller.run_csp_algorithm()
+        self.solution_label.config(text="Running Min Conficts Algorithm...")
+        solutions = self.controller.run_min_conficts_algorithm()
         self._on_algorithm_done(solutions)
 
     #راه‌حل بعدی
