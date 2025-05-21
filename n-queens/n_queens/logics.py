@@ -1,6 +1,8 @@
 # وارد کردن کلاس‌های مربوط به الگوریتم‌های حل مسئله n-Queens
 from algorithms.backtracking_algorithm import BacktrackingAlgorithm
 from algorithms.genetic_algorithm import GeneticAlgorithm
+from algorithms.min_conflicts_algorithm import MinConflictsAlgorithm
+
 
 # سازنده‌ی کلاس NQueensController
 #n: اندازه‌ی صفحه شطرنج و تعداد وزیرها
@@ -25,7 +27,7 @@ class NQueensController:
         return solver.all_solutions()
 
     """
-    اجرای الگوریتم ژنتیکی (تقریبی)
+    اجرای الگوریتم ژنتیکی
     خروجی: لیستی از جواب‌های پیدا شده با تکامل ژنتیکی
     """
     def run_genetic_algorithm(self):
@@ -33,9 +35,12 @@ class NQueensController:
         genetic = GeneticAlgorithm(self.n)
         return genetic.run_evolution()
 
+    """
+    اجرای الگوریتم Min-Conflicts به عنوان روش CSP
+    خروجی: لیستی از جواب‌های پیدا شده با الگوریتم Min-Conflicts
+    """
+    def run_min_conficts_algorithm(self):
+        csp = MinConflictsAlgorithm(self.n)
+        return csp.run()
 
-    #تابع رزرو شده برای الگوریتم CSP (هنوز پیاده‌سازی نشده)
-    def run_csp_algorithm(self):
 
-        pass
-        return True
