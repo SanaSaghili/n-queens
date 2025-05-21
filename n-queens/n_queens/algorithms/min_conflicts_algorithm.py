@@ -1,20 +1,22 @@
+# کد مربوط به الگوریتم min conficts
 import random
 
 class MinConflictsAlgorithm:
-
+    #مقداردهی اولیه الگوریتم
+    #n:تعداد وزیر
     def __init__(self, n, max_tries=10000):
         self.n = n
         self.max_tries = max_tries
         self.found = []
 
-
+    # ساخت صفحه اولیه به‌صورت تصادفی
     def create__board(self):
         board = []
         for _ in range(self.n):
             board.append(random.randint(0, self.n - 1))
         return board
 
-
+    # شمارش تعداد برخوردها برای یک وزیر خاص
     def count_conflicts(self, board, row, col):
         count = 0
         for i in range(self.n):
@@ -23,7 +25,7 @@ class MinConflictsAlgorithm:
                     count += 1
         return count
 
-
+    # پیدا کردن ستون‌هایی که وزیر درگیر برخورد است
     def conflicted_columns(self, board):
         cols = []
         for col in range(self.n):
@@ -31,7 +33,7 @@ class MinConflictsAlgorithm:
                 cols.append(col)
         return cols
 
-
+    # اجرای الگوریتم
     def run(self):
         board = self.create__board()
 
